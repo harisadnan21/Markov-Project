@@ -43,15 +43,15 @@ public class MarkovDriver {
 		//TODO: Make sure that you uncomment the MarkovInterface you want to use.
 
 		// only one line below should be uncommented
-		MarkovInterface<String> standard = new BaseMarkov();
-		MarkovInterface<String> efficient = new EfficientMarkov();
+		//MarkovInterface<String> standard = new BaseMarkov();
+		//MarkovInterface<String> efficient = new EfficientMarkov();
 		//MarkovInterface<WordGram> wmm = new BaseWordMarkov();
-		//MarkovInterface<WordGram> ewm = new EfficientWordMarkov();
+		MarkovInterface<WordGram> ewm = new EfficientWordMarkov();
 
 		//TODO: Make sure that you use the uncommented Interface up there.
 
 		// first parameter is one of the MarkovInterface variables
-		markovGenerate(efficient,text);
+		markovGenerate(ewm,text);
 	}
 
 	private static void printNicely(String random, int screenWidth) {
